@@ -1,9 +1,16 @@
 package com.example.pizza.entities;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Pizza {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String crust;
@@ -16,14 +23,6 @@ public class Pizza {
     public Pizza() {
     }
 
-    public Pizza(Long id, String crust, double price, String size, String toppings, boolean hasCheese) {
-        this.id = id;
-        this.crust = crust;
-        this.price = price;
-        this.size = size;
-        this.toppings = toppings;
-        this.hasCheese = hasCheese;
-    }
 
     public Long getId() {
         return id;

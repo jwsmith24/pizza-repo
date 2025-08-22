@@ -1,0 +1,18 @@
+services:
+  postgres-db:
+    container_name: pizza-postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: acc_dev
+      POSTGRES_PASSWORD: acc_dev12
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: password
+    ports:
+      - "5436:5432"
+    volumes:
+      - ./postgresql_data:/var/lib/postgresql/data
+
+volumes:
+  postgresql_data:
+    driver: local

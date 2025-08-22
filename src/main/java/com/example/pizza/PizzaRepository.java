@@ -1,4 +1,9 @@
 package com.example.pizza;
 
-public interface PizzaRepository {
+import com.example.pizza.entities.Pizza;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface PizzaRepository extends JpaRepository<Pizza, Long> {
+
 }

@@ -1,7 +1,7 @@
 
 
 
-GET http://localhost:8080/api/pizza/3
+GET http://localhost:8080/api/pizza/1
 
 ###
 
@@ -9,14 +9,17 @@ POST http://localhost:8080/api/pizza
 Content-Type: application/json
 
 {
-  "id": 3,
-  "crust": "butter",
-  "price": 454646,
-  "toppings": "fake",
+  "crust": "garlic",
+  "price": 29.99,
+  "toppings": "pepperoni",
   "hasCheese": true,
-  "size": "medium"
+  "size": "large"
 }
 
 ###
 
-GET http://localhost:8080/api/pizza?id=3
+GET http://localhost:8080/api/pizza?id=1
+
+###
+
+GET http://localhost:8080/api/pizza

@@ -3,6 +3,8 @@ package com.example.pizza;
 import com.example.pizza.entities.Pizza;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/pizza")
@@ -19,9 +21,14 @@ public class PizzaController {
         return pizzaService.savePizza(pizza);
     }
 
-    @GetMapping
+    @GetMapping(params = "id")
     public Pizza getPizzaById(@RequestParam Long id) {
-        return pizzaService.getPizzaById(id);
+        return pizzaService.getPizza(id);
+    }
+
+    @GetMapping
+    public List<Pizza> getAllPizzas() {
+        return pizzaService.getAllPizzas();
     }
 
 
