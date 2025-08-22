@@ -1,5 +1,7 @@
 package com.example.pizza.entities;
 
+
+
 public class Pizza {
 
     private Long id;
@@ -8,4 +10,5 @@ public class Pizza {
     private String size;
     private String toppings;
     private boolean hasCheese;
+
 }
